@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical Operators</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>22. Logical Operators</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Logical Operators Example</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let age = 20;
+    let hasId = true;
+
+    let result = age >= 18 && hasId == true;
+
+    document.getElementById("output").innerHTML =
+        "Age: " + age +
+        "<br>Has ID: " + hasId +
+        "<br>Eligible: " + result;
+</script>
+
+</body>
+</html>

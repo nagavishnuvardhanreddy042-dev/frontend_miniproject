@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr;
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-column: 1 / 3;
+            background: #1e3c72;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .sidebar {
+            background: #2a5298;
+            color: white;
+            padding: 25px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .main {
+            padding: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 700px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .header {
+                grid-column: 1;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <div class="header">
+            Student Dashboard
+        </div>
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <a href="#">Dashboard</a>
+            <a href="#">Courses</a>
+            <a href="#">Assignments</a>
+            <a href="#">Settings</a>
+        </aside>
+
+        <main class="main">
+            <h1>Welcome Student</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h2>Courses</h2>
+                    <p>5 Active Courses</p>
+                </div>
+
+                <div class="card">
+                    <h2>Assignments</h2>
+                    <p>3 Pending Assignments</p>
+                </div>
+
+                <div class="card">
+                    <h2>Attendance</h2>
+                    <p>85% Attendance</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculator</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .marks-box {
+            max-width: 450px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #f4f8f9;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 7px;
+            width: 80%;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #1d5963;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Marks Calculator</h1>
+        <p>JavaScript Mini Project</p>
+    </header>
+
+    <main class="container">
+
+        <div class="marks-box">
+            <h2>Enter Marks</h2>
+
+            <input type="number" id="mark1" placeholder="Subject 1">
+            <input type="number" id="mark2" placeholder="Subject 2">
+            <input type="number" id="mark3" placeholder="Subject 3">
+            <input type="number" id="mark4" placeholder="Subject 4">
+            <input type="number" id="mark5" placeholder="Subject 5">
+
+            <button onclick="calculateMarks()">Calculate</button>
+
+            <div id="result"></div>
+        </div>
+
+        <br>
+
+        <a href="../../index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn">Back to Mini Projects</a>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Experiments</p>
+    </footer>
+
+    <script>
+        function calculateMarks() {
+            let marks = [
+                Number(document.getElementById("mark1").value),
+                Number(document.getElementById("mark2").value),
+                Number(document.getElementById("mark3").value),
+                Number(document.getElementById("mark4").value),
+                Number(document.getElementById("mark5").value)
+            ];
+
+            let total = marks.reduce(function (sum, mark) {
+                return sum + mark;
+            }, 0);
+
+            let percentage = total / 5;
+            let grade;
+
+            if (percentage >= 90) {
+                grade = "A+";
+            } else if (percentage >= 80) {
+                grade = "A";
+            } else if (percentage >= 70) {
+                grade = "B";
+            } else if (percentage >= 60) {
+                grade = "C";
+            } else if (percentage >= 40) {
+                grade = "D";
+            } else {
+                grade = "Fail";
+            }
+
+            document.getElementById("result").innerHTML =
+                `Total Marks: ${total}/500<br>
+                 Percentage: ${percentage}%<br>
+                 Grade: ${grade}`;
+        }
+    </script>
+
+</body>
+</html>

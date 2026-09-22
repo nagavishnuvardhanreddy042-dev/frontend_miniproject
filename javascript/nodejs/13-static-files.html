@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 13 - Static Files</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 13: Serving Static Files</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To serve static files such as HTML, CSS, and images using Express.js.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                Express.js provides the express.static() middleware to serve
+                static files from a folder.
+            </p>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+
+const path = require("path");
+
+const app = express();
+
+const PORT = 7200;
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.listen(PORT, () => {
+    console.log(`Static file server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Command</h2>
+
+            <pre>node static-files.js</pre>
+
+            <h2>Sample Console Output</h2>
+
+            <pre>
+Static file server running at http://localhost:7200
+            </pre>
+
+            <h2>Browser Output</h2>
+
+            <p>
+                The files inside the public folder can be accessed through the browser.
+            </p>
+
+            <h2>Explanation</h2>
+
+            <ul>
+                <li><b>express.static():</b> Serves static files.</li>
+                <li><b>path.join():</b> Creates the correct folder path.</li>
+                <li><b>__dirname:</b> Represents the current directory.</li>
+                <li>The public folder contains static files.</li>
+            </ul>
+
+            <h2>Result</h2>
+
+            <p>
+                Thus, static files were successfully served using Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

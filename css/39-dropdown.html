@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Dropdown Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 50px;
+        }
+
+        .dropdown-button {
+            background-color: #1e3c72;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d9e8ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Dropdown Menu</h1>
+
+    <div class="dropdown">
+
+        <button class="dropdown-button">
+            Select Menu
+        </button>
+
+        <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Dynamic List</h1>
+    <p>DOM Manipulation Experiment 8</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <input type="text" id="item" placeholder="Enter item">
+
+        <br><br>
+
+        <button class="btn" onclick="addItem()">Add Item</button>
+
+        <ul id="list"></ul>
+    </div>
+</main>
+
+<script>
+    function addItem() {
+        let value = document.getElementById("item").value;
+
+        if (value.trim() === "") {
+            alert("Please enter an item");
+            return;
+        }
+
+        let li = document.createElement("li");
+        li.innerText = value;
+
+        document.getElementById("list").appendChild(li);
+
+        document.getElementById("item").value = "";
+    }
+</script>
+
+</body>
+</html>

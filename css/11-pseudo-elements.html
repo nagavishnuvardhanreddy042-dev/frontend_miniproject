@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        h2::before {
+            content: "★ ";
+            color: #d45880;
+        }
+
+        h2::after {
+            content: " ✓";
+            color: green;
+        }
+
+        p::first-letter {
+            font-size: 35px;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+
+        p::first-line {
+            font-weight: bold;
+        }
+
+        p::selection {
+            background-color: #d45880;
+            color: white;
+        }
+
+        .box {
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo-elements</h1>
+
+    <div class="box">
+
+        <h2>CSS Learning</h2>
+
+        <p>
+            CSS pseudo-elements are used to style a specific part of
+            an HTML element. They can also add content before or after
+            an element.
+        </p>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Card Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            padding: 50px;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            padding: 25px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            animation: slideIn 2s ease-out;
+        }
+
+        .card h2 {
+            color: #1e3c72;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-300px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Sliding Card</h2>
+        <p>
+            This card slides into the webpage when the page loads.
+        </p>
+    </div>
+
+</body>
+</html>

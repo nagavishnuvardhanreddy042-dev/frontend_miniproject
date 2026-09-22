@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width Height and Sizing</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .fixed-box {
+            width: 300px;
+            height: 100px;
+            background-color: #b8d0d3;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .percentage-box {
+            width: 80%;
+            height: 100px;
+            background-color: #d45880;
+            color: white;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .max-box {
+            width: 90%;
+            max-width: 700px;
+            min-height: 100px;
+            background-color: #1e3c72;
+            color: white;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Width, Height and Sizing</h1>
+
+    <div class="fixed-box">
+        Fixed Width: 300px
+    </div>
+
+    <div class="percentage-box">
+        Percentage Width: 80%
+    </div>
+
+    <div class="max-box">
+        This box uses width, max-width and min-height.
+    </div>
+
+</body>
+</html>

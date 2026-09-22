@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef4ff;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h1 {
+            color: #1e3c72;
+            text-align: center;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Feedback Form</h1>
+
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <select id="rating">
+            <option value="">Select Rating</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Average">Average</option>
+            <option value="Poor">Poor</option>
+        </select>
+
+        <textarea id="feedback" placeholder="Enter your feedback"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let rating = document.getElementById("rating").value;
+        let feedback = document.getElementById("feedback").value.trim();
+        let result = document.getElementById("result");
+
+        if (name === "" || rating === "" || feedback === "") {
+            result.textContent = "Please fill all the fields.";
+            result.style.color = "red";
+        }
+        else {
+            result.textContent = "Thank you for your valuable feedback!";
+            result.style.color = "green";
+        }
+    });
+</script>
+
+</body>
+</html>

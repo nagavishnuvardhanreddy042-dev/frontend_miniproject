@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>For Loop</h1>
+    <p>Printing numbers using a for loop</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>For Loop Example</h2>
+
+        <p id="output"></p>
+
+        <script>
+            let result = "";
+
+            for (let i = 1; i <= 10; i++) {
+                result += i + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = result;
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

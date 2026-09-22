@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 12 - Request and Response</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 12: Request and Response</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To understand how request and response objects work in Express.js.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                The request object contains information sent by the client.
+                The response object is used by the server to send data back
+                to the client.
+            </p>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 7100;
+
+app.get("/", (req, res) => {
+    res.send("This is the Home Page");
+});
+
+app.get("/student", (req, res) => {
+    res.send("Student Name: Akshara");
+});
+
+app.listen(PORT, () => {
+    console.log(`Request-Response server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Command</h2>
+
+            <pre>node request-response.js</pre>
+
+            <h2>Sample Console Output</h2>
+
+            <pre>
+Request-Response server running at http://localhost:7100
+            </pre>
+
+            <h2>Browser URLs</h2>
+
+            <pre>
+http://localhost:7100
+http://localhost:7100/student
+            </pre>
+
+            <h2>Browser Output</h2>
+
+            <ul>
+                <li>Home Page: This is the Home Page</li>
+                <li>Student Page: Student Name: Akshara</li>
+            </ul>
+
+            <h2>Explanation</h2>
+
+            <ul>
+                <li><b>req:</b> Stores client request information.</li>
+                <li><b>res:</b> Sends a response to the client.</li>
+                <li><b>res.send():</b> Sends text to the browser.</li>
+                <li>Different URLs produce different responses.</li>
+            </ul>
+
+            <h2>Result</h2>
+            <p>
+                Thus, request and response objects were successfully
+                implemented in Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

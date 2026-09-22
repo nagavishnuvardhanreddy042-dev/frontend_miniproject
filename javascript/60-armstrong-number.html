@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>60. Armstrong Number</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Check Armstrong Number</h2>
+
+        <input type="number" id="number" placeholder="Enter number">
+        <br><br>
+
+        <button class="btn" onclick="checkArmstrong()">
+            Check
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function checkArmstrong() {
+        let number = Number(document.getElementById("number").value);
+        let original = number;
+        let sum = 0;
+        let digits = number.toString().length;
+
+        while (number > 0) {
+            let digit = number % 10;
+            sum += digit ** digits;
+            number = Math.floor(number / 10);
+        }
+
+        document.getElementById("output").innerHTML =
+            sum === original
+                ? original + " is an Armstrong number."
+                : original + " is not an Armstrong number.";
+    }
+</script>
+
+</body>
+</html>

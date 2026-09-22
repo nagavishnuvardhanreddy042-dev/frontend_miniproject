@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Method</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>31. Find Method</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Find a Number</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let numbers = [10, 20, 30, 40, 50];
+
+    let result = numbers.find(function(number) {
+        return number > 25;
+    });
+
+    document.getElementById("output").innerHTML =
+        "First number greater than 25: " + result;
+</script>
+
+</body>
+</html>

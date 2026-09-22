@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>JavaScript Objects</h1>
+    <p>Storing related data using objects</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Object Example</h2>
+        <p id="output"></p>
+
+        <script>
+            let student = {
+                name: "N.vishnu Vardhan",
+                age: 20,
+                course: "Computer Science",
+                college: "Sai University"
+            };
+
+            document.getElementById("output").innerHTML =
+                "Name: " + student.name + "<br>" +
+                "Age: " + student.age + "<br>" +
+                "Course: " + student.course + "<br>" +
+                "College: " + student.college;
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

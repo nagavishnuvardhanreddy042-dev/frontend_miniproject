@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .portfolio {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: #f4f8f9;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        .portfolio button {
+            padding: 12px 20px;
+            margin: 8px;
+            border: none;
+            background-color: #1d5963;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .portfolio button:hover {
+            background-color: #d45880;
+        }
+
+        .section {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Interactive Portfolio</h1>
+        <p>JavaScript Mini Project</p>
+    </header>
+
+    <main class="container">
+
+        <div class="portfolio">
+            <h2>My Portfolio</h2>
+
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('skills')">Skills</button>
+            <button onclick="showSection('projects')">Projects</button>
+            <button onclick="showSection('contact')">Contact</button>
+
+            <div id="about" class="section active">
+                <h3>About Me</h3>
+                <p>I am a Computer Science student learning web development.</p>
+            </div>
+
+            <div id="skills" class="section">
+                <h3>Skills</h3>
+                <p>HTML, CSS, JavaScript, Java and Python</p>
+            </div>
+
+            <div id="projects" class="section">
+                <h3>Projects</h3>
+                <p>Portfolio Website, Weather App and To-Do List</p>
+            </div>
+
+            <div id="contact" class="section">
+                <h3>Contact</h3>
+                <p>Email: student@example.com</p>
+            </div>
+        </div>
+
+        <br>
+
+        <a href="../../index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn">Back to Mini Projects</a>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Experiments</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll(".section");
+
+            sections.forEach(function (section) {
+                section.classList.remove("active");
+            });
+
+            document.getElementById(sectionId)
+                    .classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

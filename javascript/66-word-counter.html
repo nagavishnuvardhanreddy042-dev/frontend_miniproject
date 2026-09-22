@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>66. Word Counter</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Count Words</h2>
+
+        <textarea id="text" placeholder="Enter a sentence"></textarea>
+        <br><br>
+
+        <button class="btn" onclick="countWords()">
+            Count Words
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function countWords() {
+        let text = document.getElementById("text").value.trim();
+
+        if (text === "") {
+            document.getElementById("output").innerHTML =
+                "Word Count: 0";
+            return;
+        }
+
+        let words = text.split(/\s+/);
+
+        document.getElementById("output").innerHTML =
+            "Word Count: " + words.length;
+    }
+</script>
+
+</body>
+</html>

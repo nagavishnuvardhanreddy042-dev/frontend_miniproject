@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set Object</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>36. Set Object</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Remove Duplicate Values</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let numbers = [10, 20, 20, 30, 40, 40];
+
+    let uniqueNumbers = [...new Set(numbers)];
+
+    document.getElementById("output").innerHTML =
+        "Original Array: " + numbers.join(", ") +
+        "<br>Unique Values: " + uniqueNumbers.join(", ");
+</script>
+
+</body>
+</html>

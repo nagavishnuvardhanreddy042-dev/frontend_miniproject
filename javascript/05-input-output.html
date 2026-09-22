@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Input Output</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>JavaScript Input and Output</h1>
+    <p>Using prompt, alert and document output</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Input and Output Example</h2>
+
+        <button class="btn" onclick="getUserName()">
+            Enter Your Name
+        </button>
+
+        <p id="output"></p>
+
+        <script>
+            function getUserName() {
+                let userName = prompt("Enter your name:");
+
+                if (userName !== null && userName !== "") {
+                    alert("Welcome " + userName);
+                    document.getElementById("output").innerHTML =
+                        "Hello, " + userName + "!";
+                } else {
+                    document.getElementById("output").innerHTML =
+                        "You did not enter your name.";
+                }
+            }
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

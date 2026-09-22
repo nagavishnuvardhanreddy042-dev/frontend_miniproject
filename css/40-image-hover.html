@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effects</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e3c72;
+        }
+
+        .image-container {
+            width: 350px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.2);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Hover Effect</h1>
+
+    <div class="image-container">
+        <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+            alt="Nature Image">
+    </div>
+
+</body>
+</html>

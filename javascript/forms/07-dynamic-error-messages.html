@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Error Messages</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef4ff;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Dynamic Validation</h1>
+
+    <form id="dynamicForm">
+
+        <div class="field">
+            <input type="text" id="name" placeholder="Enter name">
+            <span id="nameError" class="error"></span>
+        </div>
+
+        <div class="field">
+            <input type="email" id="email" placeholder="Enter email">
+            <span id="emailError" class="error"></span>
+        </div>
+
+        <div class="field">
+            <input type="password" id="password" placeholder="Enter password">
+            <span id="passwordError" class="error"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="successMessage" class="success"></p>
+</div>
+
+<script>
+    let nameInput = document.getElementById("name");
+    let emailInput = document.getElementById("email");
+    let passwordInput = document.getElementById("password");
+
+    nameInput.addEventListener("input", function() {
+        if (nameInput.value.trim() === "") {
+            document.getElementById("nameError").textContent = "Name is required";
+        } else {
+            document.getElementById("nameError").textContent = "";
+        }
+    });
+
+    emailInput.addEventListener("input", function() {
+        if (emailInput.value.trim() === "") {
+            document.getElementById("emailError").textContent = "Email is required";
+        } else if (!emailInput.value.includes("@")) {
+            document.getElementById("emailError").textContent = "Enter a valid email";
+        } else {
+            document.getElementById("emailError").textContent = "";
+        }
+    });
+
+    passwordInput.addEventListener("input", function() {
+        if (passwordInput.value.length < 6) {
+            document.getElementById("passwordError").textContent =
+                "Password must contain at least 6 characters";
+        } else {
+            document.getElementById("passwordError").textContent = "";
+        }
+    });
+
+    document.getElementById("dynamicForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = nameInput.value.trim();
+        let email = emailInput.value.trim();
+        let password = passwordInput.value;
+        let successMessage = document.getElementById("successMessage");
+
+        if (name !== "" && email.includes("@") && password.length >= 6) {
+            successMessage.textContent = "Form submitted successfully!";
+        } else {
+            successMessage.textContent = "";
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Search</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Live Search</h1>
+    <p>DOM Manipulation Experiment 14</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <input type="text" id="search" placeholder="Search names..."
+               onkeyup="searchNames()">
+
+        <ul id="names">
+            <li>Akshara</li>
+            <li>Rahul</li>
+            <li>Priya</li>
+            <li>Manohar</li>
+            <li>Sneha</li>
+        </ul>
+    </div>
+</main>
+
+<script>
+    function searchNames() {
+        let input = document.getElementById("search").value.toLowerCase();
+        let items = document.querySelectorAll("#names li");
+
+        items.forEach(function (item) {
+            let name = item.innerText.toLowerCase();
+
+            if (name.includes(input)) {
+                item.style.display = "list-item";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

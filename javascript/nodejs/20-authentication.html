@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 20 - Authentication</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 20: Authentication</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To implement basic username and password authentication
+                using Node.js and Express.js.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                Authentication is the process of verifying the identity
+                of a user using login credentials such as username and password.
+            </p>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 7800;
+
+app.use(express.json());
+
+const username = "admin";
+const password = "1234";
+
+app.post("/login", (req, res) => {
+    if (
+        req.body.username === username &&
+        req.body.password === password
+    ) {
+        res.send("Login successful");
+    } else {
+        res.status(401).send("Invalid username or password");
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Authentication server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Command</h2>
+
+            <pre>node authentication.js</pre>
+
+            <h2>API URL</h2>
+
+            <pre>http://localhost:7800/login</pre>
+
+            <h2>Login Credentials</h2>
+
+            <pre>
+Username: admin
+Password: 1234
+            </pre>
+
+            <h2>Sample Output</h2>
+
+            <pre>Login successful</pre>
+
+            <h2>Result</h2>
+            <p>
+                Thus, basic user authentication was successfully implemented
+                using Node.js and Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

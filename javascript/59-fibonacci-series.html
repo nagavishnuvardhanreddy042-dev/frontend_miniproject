@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>59. Fibonacci Series</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Fibonacci Series</h2>
+
+        <button class="btn" onclick="generateFibonacci()">
+            Generate Series
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function generateFibonacci() {
+        let first = 0;
+        let second = 1;
+        let result = "";
+
+        for (let i = 1; i <= 10; i++) {
+            result += first + " ";
+
+            let next = first + second;
+            first = second;
+            second = next;
+        }
+
+        document.getElementById("output").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 17 - Database Connection</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Experiment 17: Database Connection</h1>
+    <p>Node.js and Express.js Practical Program</p>
+</header>
+
+<main class="container">
+<div class="card">
+
+<h2>Aim</h2>
+<p>To understand how to connect a Node.js application with MongoDB.</p>
+
+<h2>Theory</h2>
+<p>
+MongoDB is a NoSQL database used to store data in document format.
+Mongoose is a Node.js library used to connect and work with MongoDB.
+</p>
+
+<h2>Required Package</h2>
+<pre>npm install mongoose</pre>
+
+<h2>Program</h2>
+<pre>
+const mongoose = require("mongoose");
+
+mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
+    .then(() => {
+        console.log("MongoDB connected successfully");
+    })
+    .catch((error) => {
+        console.log("Database connection failed");
+    });
+</pre>
+
+<h2>Execution Commands</h2>
+<pre>
+npm install mongoose
+node database-connection.js
+</pre>
+
+<h2>Sample Output</h2>
+<pre>MongoDB connected successfully</pre>
+
+<h2>Explanation</h2>
+<ul>
+    <li><b>mongoose:</b> Connects Node.js with MongoDB.</li>
+    <li><b>mongoose.connect():</b> Establishes database connection.</li>
+    <li><b>then():</b> Executes when connection is successful.</li>
+    <li><b>catch():</b> Handles connection errors.</li>
+</ul>
+
+<h2>Result</h2>
+<p>Thus, a MongoDB connection was implemented using Mongoose.</p>
+
+<br>
+<a href="index.html" class="btn">Back to Node.js Experiments</a>
+
+</div>
+</main>
+
+<footer>
+<p>Node.js Backend Practical Experiments</p>
+</footer>
+
+</body>
+</html>

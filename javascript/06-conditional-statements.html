@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Conditional Statements</h1>
+    <p>Using if, else if and else</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Check Student Result</h2>
+
+        <p id="output"></p>
+
+        <script>
+            let marks = 75;
+            let result;
+
+            if (marks >= 90) {
+                result = "Grade A+";
+            } else if (marks >= 75) {
+                result = "Grade A";
+            } else if (marks >= 60) {
+                result = "Grade B";
+            } else if (marks >= 40) {
+                result = "Pass";
+            } else {
+                result = "Fail";
+            }
+
+            document.getElementById("output").innerHTML =
+                "Marks: " + marks + "<br>Result: " + result;
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

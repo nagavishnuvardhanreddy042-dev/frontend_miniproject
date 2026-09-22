@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Click Event</h1>
+    <p>Events Experiment 1</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <button class="btn" id="clickBtn">Click Me</button>
+        <p id="result"></p>
+    </div>
+</main>
+
+<script>
+    document.getElementById("clickBtn").addEventListener("click", function () {
+        document.getElementById("result").innerText =
+            "Button clicked successfully!";
+    });
+</script>
+
+</body>
+</html>

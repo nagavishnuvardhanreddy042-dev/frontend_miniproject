@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Flexbox</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #eef2f3;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .column {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .column h2 {
+            color: #2a5298;
+        }
+
+        .column p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Three Column Flexbox Layout</h1>
+
+    <div class="container">
+
+        <div class="column">
+            <h2>Column One</h2>
+            <p>
+                This is the first column created using Flexbox.
+            </p>
+        </div>
+
+        <div class="column">
+            <h2>Column Two</h2>
+            <p>
+                This is the second column created using Flexbox.
+            </p>
+        </div>
+
+        <div class="column">
+            <h2>Column Three</h2>
+            <p>
+                This is the third column created using Flexbox.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

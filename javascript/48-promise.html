@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>48. Promise</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Promise Example</h2>
+        <p id="output">Processing...</p>
+    </div>
+</main>
+
+<script>
+    let myPromise = new Promise(function(resolve, reject) {
+        let success = true;
+
+        if (success) {
+            resolve("Promise completed successfully.");
+        } else {
+            reject("Promise failed.");
+        }
+    });
+
+    myPromise
+        .then(function(message) {
+            document.getElementById("output").innerHTML = message;
+        })
+        .catch(function(error) {
+            document.getElementById("output").innerHTML = error;
+        });
+</script>
+
+</body>
+</html>

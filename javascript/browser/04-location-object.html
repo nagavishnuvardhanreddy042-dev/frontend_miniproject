@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location Object</title>
+</head>
+<body>
+
+<h1>Location Object</h1>
+
+<button onclick="showLocation()">Show Current URL</button>
+
+<p id="result"></p>
+
+<script>
+    function showLocation() {
+        document.getElementById("result").innerHTML =
+            "Complete URL: " + location.href + "<br>" +
+            "Hostname: " + location.hostname + "<br>" +
+            "Pathname: " + location.pathname;
+    }
+</script>
+
+</body>
+</html>

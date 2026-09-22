@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .product-card {
+            width: 280px;
+            background-color: white;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            height: 160px;
+            background-color: #d9e8ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            border-radius: 8px;
+        }
+
+        .product-card h2 {
+            color: #1e3c72;
+        }
+
+        .price {
+            color: #d45880;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #1e3c72;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2a5298;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product Card</h1>
+
+    <div class="product-card">
+
+        <div class="product-image">🎧</div>
+
+        <h2>Wireless Headphones</h2>
+
+        <p>High-quality wireless headphones with clear sound.</p>
+
+        <p class="price">₹1,499</p>
+
+        <button>Add to Cart</button>
+
+    </div>
+
+</body>
+</html>

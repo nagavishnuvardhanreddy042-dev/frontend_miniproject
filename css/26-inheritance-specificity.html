@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance and Specificity</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 30px;
+            background-color: #f4f7fb;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .container {
+            color: green;
+            padding: 25px;
+            background-color: white;
+        }
+
+        p {
+            color: blue;
+        }
+
+        #special {
+            color: red;
+        }
+
+        .highlight {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Inheritance and Specificity</h1>
+
+    <div class="container">
+        <p>This paragraph receives styles from the element selector.</p>
+
+        <p class="highlight">
+            This paragraph uses a class selector.
+        </p>
+
+        <p id="special">
+            This paragraph uses an ID selector, which has higher specificity.
+        </p>
+    </div>
+
+</body>
+</html>

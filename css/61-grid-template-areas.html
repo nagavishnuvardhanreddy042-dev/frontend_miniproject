@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Areas</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background: #1e3c72;
+            color: white;
+            padding: 25px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #dce8f7;
+            padding: 25px;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 30px;
+            background: #f4f7fb;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .layout {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout">
+
+        <header class="header">
+            <h1>Website Header</h1>
+        </header>
+
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+        </aside>
+
+        <main class="main">
+            <h2>Main Content</h2>
+            <p>
+                This layout is created using CSS Grid Template Areas.
+            </p>
+        </main>
+
+        <footer class="footer">
+            <p>Website Footer</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Calculator</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 12px;
+        }
+
+        #display {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 24px;
+            text-align: right;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background: #ddd;
+        }
+
+        .clear {
+            background: #e57373;
+        }
+
+        .operator {
+            background: #90caf9;
+        }
+
+        .equal {
+            background: #81c784;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Digital Calculator</h1>
+        <p>A simple calculator using HTML, CSS and JavaScript</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Calculator</h2>
+
+            <div class="calculator">
+
+                <input type="text" id="display" readonly>
+
+                <div class="buttons">
+
+                    <button class="clear" onclick="clearDisplay()">C</button>
+                    <button onclick="deleteLast()">DEL</button>
+                    <button class="operator" onclick="appendValue('/')">÷</button>
+                    <button class="operator" onclick="appendValue('*')">×</button>
+
+                    <button onclick="appendValue('7')">7</button>
+                    <button onclick="appendValue('8')">8</button>
+                    <button onclick="appendValue('9')">9</button>
+                    <button class="operator" onclick="appendValue('-')">−</button>
+
+                    <button onclick="appendValue('4')">4</button>
+                    <button onclick="appendValue('5')">5</button>
+                    <button onclick="appendValue('6')">6</button>
+                    <button class="operator" onclick="appendValue('+')">+</button>
+
+                    <button onclick="appendValue('1')">1</button>
+                    <button onclick="appendValue('2')">2</button>
+                    <button onclick="appendValue('3')">3</button>
+                    <button class="equal" onclick="calculate()">=</button>
+
+                    <button onclick="appendValue('0')">0</button>
+                    <button onclick="appendValue('.')">.</button>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <a href="../../index.html" class="btn">
+                Back to Home
+            </a>
+
+            <a href="index.html" class="btn">
+                Back to Mini Projects
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Mini Projects</p>
+    </footer>
+
+
+    <script>
+
+        let display = document.getElementById("display");
+
+        function appendValue(value) {
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            display.value = "";
+        }
+
+        function deleteLast() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calculate() {
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = "Error";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

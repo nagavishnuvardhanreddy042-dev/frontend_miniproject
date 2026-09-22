@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exception Handling</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>43. Exception Handling</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Try, Catch and Finally</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let output = "";
+
+    try {
+        let result = unknownVariable;
+        output = result;
+    } catch (error) {
+        output = "An error occurred: " + error.message;
+    } finally {
+        output += "<br>Execution completed.";
+    }
+
+    document.getElementById("output").innerHTML = output;
+</script>
+
+</body>
+</html>

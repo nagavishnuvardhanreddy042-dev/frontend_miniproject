@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 9 - Express Server</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Experiment 9: Creating an Express Server</h1>
+    </header>
+
+    <main class="content">
+
+        <h2>Aim</h2>
+        <p>
+            To create an Express server with multiple routes.
+        </p>
+
+        <h2>Theory</h2>
+        <p>
+            An Express server receives client requests and sends responses.
+            Routes are used to display different content for different URLs.
+        </p>
+
+        <h2>Program</h2>
+        <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 4000;
+
+app.get("/", (req, res) => {
+    res.send("Welcome to my Express Server!");
+});
+
+app.get("/about", (req, res) => {
+    res.send("This is the About page.");
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
+        </pre>
+
+        <h2>Execution Command</h2>
+        <pre>node express-server.js</pre>
+
+        <h2>Routes</h2>
+        <ul>
+            <li><b>/</b> - Home page</li>
+            <li><b>/about</b> - About page</li>
+        </ul>
+
+        <h2>Sample Output</h2>
+        <pre>
+Server running at http://localhost:4000
+        </pre>
+
+        <h2>Result</h2>
+        <p>
+            Thus, an Express server with multiple routes was successfully created.
+        </p>
+
+        <br>
+
+        <a href="index.html" class="btn">
+            Back to Node.js Experiments
+        </a>
+
+    </main>
+
+</body>
+</html>

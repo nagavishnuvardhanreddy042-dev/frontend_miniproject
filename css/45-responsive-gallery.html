@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Photo Gallery</h1>
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Image 1">
+        <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e" alt="Image 2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Image 3">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Image 4">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Image 5">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Image 6">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Object</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>37. Map Object</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Student Details Using Map</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let student = new Map();
+
+    student.set("Name", "N.vishnu Vardhan");
+    student.set("Course", "Computer Science");
+    student.set("Year", 2);
+
+    document.getElementById("output").innerHTML =
+        "Name: " + student.get("Name") +
+        "<br>Course: " + student.get("Course") +
+        "<br>Year: " + student.get("Year");
+</script>
+
+</body>
+</html>

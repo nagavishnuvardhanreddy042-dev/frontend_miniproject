@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>63. Multiplication Table</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Generate Multiplication Table</h2>
+
+        <input type="number" id="number" placeholder="Enter number">
+        <br><br>
+
+        <button class="btn" onclick="generateTable()">
+            Generate
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function generateTable() {
+        let number = Number(document.getElementById("number").value);
+        let result = "";
+
+        for (let i = 1; i <= 10; i++) {
+            result += number + " × " + i +
+                " = " + (number * i) + "<br>";
+        }
+
+        document.getElementById("output").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>

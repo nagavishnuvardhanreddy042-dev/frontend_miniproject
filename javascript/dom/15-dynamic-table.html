@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Dynamic Table</h1>
+    <p>DOM Manipulation Experiment 15</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <button class="btn" onclick="addRow()">Add Student</button>
+
+        <br><br>
+
+        <table border="1" cellpadding="10" id="studentTable">
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+        </table>
+    </div>
+</main>
+
+<script>
+    function addRow() {
+        let table = document.getElementById("studentTable");
+
+        let row = table.insertRow();
+
+        let nameCell = row.insertCell(0);
+        let courseCell = row.insertCell(1);
+
+        nameCell.innerText = "New Student";
+        courseCell.innerText = "Computer Science";
+    }
+</script>
+
+</body>
+</html>

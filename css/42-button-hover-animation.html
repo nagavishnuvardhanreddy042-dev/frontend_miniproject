@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Animation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #1e3c72;
+        }
+
+        .animated-button {
+            margin-top: 60px;
+            padding: 15px 30px;
+            background-color: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .animated-button:hover {
+            background-color: #d45880;
+            transform: translateY(-8px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Button Hover Animation</h1>
+
+    <button class="animated-button">
+        Hover Me
+    </button>
+
+</body>
+</html>

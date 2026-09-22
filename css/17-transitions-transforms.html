@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions and Transforms</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e3c72;
+        }
+
+        .box {
+            width: 180px;
+            height: 180px;
+            background-color: #1e3c72;
+            color: white;
+            margin: 80px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+
+        .box:hover {
+            background-color: #d45880;
+            transform: rotate(15deg) scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Transitions and Transforms</h1>
+
+    <div class="box">
+        Hover Me
+    </div>
+
+</body>
+</html>

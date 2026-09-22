@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>53. Digital Clock</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2 id="clock"></h2>
+    </div>
+</main>
+
+<script>
+    function updateClock() {
+        let now = new Date();
+
+        document.getElementById("clock").innerHTML =
+            now.toLocaleTimeString();
+    }
+
+    updateClock();
+
+    setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>

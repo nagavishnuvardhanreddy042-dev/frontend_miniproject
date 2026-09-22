@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Storage</title>
+</head>
+<body>
+
+<h1>Session Storage Example</h1>
+
+<input type="text" id="city" placeholder="Enter your city">
+
+<button onclick="saveCity()">Save City</button>
+<button onclick="getCity()">Get City</button>
+<button onclick="clearCity()">Clear City</button>
+
+<p id="result"></p>
+
+<script>
+    function saveCity() {
+        let city = document.getElementById("city").value;
+
+        sessionStorage.setItem("city", city);
+
+        document.getElementById("result").textContent =
+            "City saved in session storage.";
+    }
+
+    function getCity() {
+        let city = sessionStorage.getItem("city");
+
+        document.getElementById("result").textContent =
+            city ? "Stored City: " + city : "No city found.";
+    }
+
+    function clearCity() {
+        sessionStorage.removeItem("city");
+
+        document.getElementById("result").textContent =
+            "City removed.";
+    }
+</script>
+
+</body>
+</html>

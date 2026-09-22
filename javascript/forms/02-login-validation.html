@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2ff;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Login Form</h1>
+
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Enter username">
+        <input type="password" id="password" placeholder="Enter password">
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let username = document.getElementById("username").value.trim();
+        let password = document.getElementById("password").value;
+        let result = document.getElementById("result");
+
+        if (username === "") {
+            result.textContent = "Username is required.";
+            result.style.color = "red";
+        }
+        else if (password === "") {
+            result.textContent = "Password is required.";
+            result.style.color = "red";
+        }
+        else if (password.length < 6) {
+            result.textContent = "Password must contain at least 6 characters.";
+            result.style.color = "red";
+        }
+        else {
+            result.textContent = "Login validation successful.";
+            result.style.color = "green";
+        }
+    });
+</script>
+
+</body>
+</html>

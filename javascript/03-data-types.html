@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>JavaScript Data Types</h1>
+    <p>Different types of values in JavaScript</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Data Types Example</h2>
+        <p id="output"></p>
+
+        <script>
+            let name = "N.vishnu Vardhan";
+            let age = 20;
+            let isStudent = true;
+            let marks;
+            let emptyValue = null;
+
+            document.getElementById("output").innerHTML =
+                "Name: " + name + " - " + typeof name + "<br>" +
+                "Age: " + age + " - " + typeof age + "<br>" +
+                "Student: " + isStudent + " - " + typeof isStudent + "<br>" +
+                "Undefined value: " + typeof marks + "<br>" +
+                "Null value: " + emptyValue;
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

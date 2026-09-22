@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .timer-box {
+            max-width: 450px;
+            margin: 30px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: #f4f8f9;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        #display {
+            font-size: 35px;
+            font-weight: bold;
+            margin: 20px;
+            color: #1d5963;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            background-color: #1d5963;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d45880;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Countdown Timer</h1>
+        <p>JavaScript Mini Project</p>
+    </header>
+
+    <main class="container">
+
+        <div class="timer-box">
+            <h2>Set Countdown Time</h2>
+
+            <input type="number" id="secondsInput"
+                   placeholder="Enter seconds">
+
+            <br>
+
+            <button onclick="startTimer()">Start</button>
+            <button onclick="resetTimer()">Reset</button>
+
+            <div id="display">00</div>
+        </div>
+
+        <br>
+
+        <a href="../../index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn">Back to Mini Projects</a>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Experiments</p>
+    </footer>
+
+    <script>
+        let remainingSeconds = 0;
+        let timer = null;
+
+        function startTimer() {
+            clearInterval(timer);
+
+            remainingSeconds = Number(
+                document.getElementById("secondsInput").value
+            );
+
+            if (remainingSeconds <= 0) {
+                alert("Please enter a valid number of seconds");
+                return;
+            }
+
+            updateDisplay();
+
+            timer = setInterval(function () {
+                remainingSeconds--;
+                updateDisplay();
+
+                if (remainingSeconds <= 0) {
+                    clearInterval(timer);
+                    alert("Time is over!");
+                }
+            }, 1000);
+        }
+
+        function updateDisplay() {
+            document.getElementById("display").textContent =
+                remainingSeconds;
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            remainingSeconds = 0;
+            document.getElementById("display").textContent = "00";
+            document.getElementById("secondsInput").value = "";
+        }
+    </script>
+
+</body>
+</html>

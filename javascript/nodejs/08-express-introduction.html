@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 8 - Express.js Introduction</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Experiment 8: Express.js Introduction</h1>
+    </header>
+
+    <main class="content">
+
+        <h2>Aim</h2>
+        <p>
+            To create a simple web server using the Express.js framework.
+        </p>
+
+        <h2>Theory</h2>
+        <p>
+            Express.js is a web application framework for Node.js.
+            It simplifies server creation, routing, request handling,
+            and API development.
+        </p>
+
+        <h2>Installation</h2>
+        <pre>npm install express</pre>
+
+        <h2>Program</h2>
+        <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+    res.send("Hello! This is my first Express.js application.");
+});
+
+app.listen(PORT, () => {
+    console.log(`Express server running at http://localhost:3000`);
+});
+        </pre>
+
+        <h2>Execution Command</h2>
+        <pre>node express-demo.js</pre>
+
+        <h2>Console Output</h2>
+        <pre>
+Express server running at http://localhost:3000
+        </pre>
+
+        <h2>Browser Output</h2>
+        <p>
+            Hello! This is my first Express.js application.
+        </p>
+
+        <h2>Explanation</h2>
+        <ul>
+            <li><b>require("express"):</b> Imports Express.js.</li>
+            <li><b>express():</b> Creates an Express application.</li>
+            <li><b>app.get("/"):</b> Handles requests to the home route.</li>
+            <li><b>res.send():</b> Sends a response to the browser.</li>
+            <li><b>app.listen():</b> Starts the server.</li>
+        </ul>
+
+        <h2>Result</h2>
+        <p>
+            Thus, a simple Express.js server was successfully created
+            and accessed through the browser.
+        </p>
+
+        <br>
+
+        <a href="index.html" class="btn">
+            Back to Node.js Experiments
+        </a>
+
+    </main>
+
+</body>
+</html>

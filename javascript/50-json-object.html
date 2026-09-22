@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Object</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>50. JSON Object</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>JSON Parse and Stringify</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let student = {
+        name: "N.vishnu Vardhan",
+        course: "CSE",
+        year: 2
+    };
+
+    let jsonData = JSON.stringify(student);
+    let convertedObject = JSON.parse(jsonData);
+
+    document.getElementById("output").innerHTML =
+        "JSON String: " + jsonData +
+        "<br>Student Name: " + convertedObject.name +
+        "<br>Course: " + convertedObject.course +
+        "<br>Year: " + convertedObject.year;
+</script>
+
+</body>
+</html>

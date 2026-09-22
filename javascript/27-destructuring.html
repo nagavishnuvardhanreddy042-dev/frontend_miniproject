@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destructuring</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>27. Destructuring</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Array Destructuring</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let subjects = ["HTML", "CSS", "JavaScript"];
+
+    let [first, second, third] = subjects;
+
+    document.getElementById("output").innerHTML =
+        "First Subject: " + first +
+        "<br>Second Subject: " + second +
+        "<br>Third Subject: " + third;
+</script>
+
+</body>
+</html>

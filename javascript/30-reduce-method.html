@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reduce Method</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>30. Reduce Method</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Calculate Total</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let marks = [80, 75, 90, 85];
+
+    let total = marks.reduce(function(sum, mark) {
+        return sum + mark;
+    }, 0);
+
+    document.getElementById("output").innerHTML =
+        "Marks: " + marks.join(", ") +
+        "<br>Total Marks: " + total;
+</script>
+
+</body>
+</html>

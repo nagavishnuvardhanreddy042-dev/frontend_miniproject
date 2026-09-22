@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .clock-box {
+            max-width: 450px;
+            margin: 40px auto;
+            padding: 35px 20px;
+            background: #222;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        #clock {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        #date {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Digital Clock</h1>
+        <p>A real-time clock using JavaScript Date object</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Current Time</h2>
+
+            <div class="clock-box">
+                <div id="clock">00:00:00</div>
+                <div id="date">Loading date...</div>
+            </div>
+
+            <br>
+
+            <a href="../../index.html" class="btn">
+                Back to Home
+            </a>
+
+            <a href="index.html" class="btn">
+                Back to Mini Projects
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Mini Projects</p>
+    </footer>
+
+    <script>
+
+        function updateClock() {
+
+            const now = new Date();
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            let ampm = hours >= 12 ? "PM" : "AM";
+
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+
+            hours = String(hours).padStart(2, "0");
+            minutes = String(minutes).padStart(2, "0");
+            seconds = String(seconds).padStart(2, "0");
+
+            document.getElementById("clock").textContent =
+                `${hours}:${minutes}:${seconds} ${ampm}`;
+
+            document.getElementById("date").textContent =
+                now.toDateString();
+        }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+
+    </script>
+
+</body>
+</html>

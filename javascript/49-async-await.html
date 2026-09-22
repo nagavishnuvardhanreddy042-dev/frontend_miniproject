@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Await</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>49. Async and Await</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Async Function Example</h2>
+        <p id="output">Loading...</p>
+    </div>
+</main>
+
+<script>
+    function getMessage() {
+        return new Promise(function(resolve) {
+            setTimeout(function() {
+                resolve("Data received successfully.");
+            }, 2000);
+        });
+    }
+
+    async function displayData() {
+        let message = await getMessage();
+
+        document.getElementById("output").innerHTML = message;
+    }
+
+    displayData();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Content</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Change Content</h1>
+    <p>DOM Manipulation Experiment 2</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2 id="text">Old Content</h2>
+
+        <button class="btn" onclick="changeContent()">
+            Change Content
+        </button>
+    </div>
+</main>
+
+<script>
+    function changeContent() {
+        document.getElementById("text").innerText =
+            "Content Changed Successfully!";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vowel Counter</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>64. Vowel Counter</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Count Vowels</h2>
+
+        <input type="text" id="text" placeholder="Enter a sentence">
+        <br><br>
+
+        <button class="btn" onclick="countVowels()">
+            Count
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function countVowels() {
+        let text = document.getElementById("text").value.toLowerCase();
+        let count = 0;
+
+        for (let character of text) {
+            if ("aeiou".includes(character)) {
+                count++;
+            }
+        }
+
+        document.getElementById("output").innerHTML =
+            "Number of vowels: " + count;
+    }
+</script>
+
+</body>
+</html>

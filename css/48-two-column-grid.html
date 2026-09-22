@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .box h2 {
+            color: #1e3c72;
+        }
+
+        .box p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        @media (max-width: 700px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Two Column Grid Layout</h1>
+
+    <div class="layout">
+
+        <div class="box">
+            <h2>About HTML</h2>
+            <p>
+                HTML is used to create the structure of a webpage.
+                It provides headings, paragraphs, images, links and forms.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>About CSS</h2>
+            <p>
+                CSS is used to style webpages using colors, fonts,
+                spacing, borders and responsive layouts.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        /* Element selector */
+        h2 {
+            color: #1e3c72;
+        }
+
+        /* Class selector */
+        .highlight {
+            background-color: #fff3cd;
+            padding: 12px;
+            border-left: 5px solid #d45880;
+        }
+
+        /* ID selector */
+        #special-text {
+            color: #d45880;
+            font-weight: bold;
+        }
+
+        /* Grouping selector */
+        h3,
+        p {
+            margin-bottom: 12px;
+        }
+
+        /* Universal selector demonstration */
+        .selector-box * {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CSS Selectors</h1>
+        <p>Experiment 2: Different Types of CSS Selectors</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card selector-box">
+
+            <h2>Element Selector</h2>
+
+            <p>
+                This heading is styled using an element selector.
+            </p>
+
+            <h2>Class Selector</h2>
+
+            <p class="highlight">
+                This paragraph uses a class selector.
+            </p>
+
+            <h2>ID Selector</h2>
+
+            <p id="special-text">
+                This paragraph uses an ID selector.
+            </p>
+
+            <h2>Grouping Selector</h2>
+
+            <h3>This is a heading</h3>
+
+            <p>
+                Both h3 and p are styled using a grouping selector.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to CSS Programs
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>CSS Experiment 2</p>
+    </footer>
+
+</body>
+</html>

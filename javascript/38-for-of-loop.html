@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Of Loop</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>38. For...of Loop</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Display Array Values</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let fruits = ["Apple", "Banana", "Mango", "Orange"];
+    let result = "";
+
+    for (let fruit of fruits) {
+        result += fruit + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>

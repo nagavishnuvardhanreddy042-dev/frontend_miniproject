@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>58. Factorial Program</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Calculate Factorial</h2>
+
+        <input type="number" id="number" placeholder="Enter number">
+        <br><br>
+
+        <button class="btn" onclick="calculateFactorial()">
+            Calculate
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function calculateFactorial() {
+        let number = Number(document.getElementById("number").value);
+        let factorial = 1;
+
+        for (let i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+
+        document.getElementById("output").innerHTML =
+            "Factorial: " + factorial;
+    }
+</script>
+
+</body>
+</html>

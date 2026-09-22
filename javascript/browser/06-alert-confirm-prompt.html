@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alert Confirm Prompt</title>
+</head>
+<body>
+
+<h1>Alert, Confirm and Prompt</h1>
+
+<button onclick="showAlert()">Alert</button>
+<button onclick="showConfirm()">Confirm</button>
+<button onclick="showPrompt()">Prompt</button>
+
+<p id="result"></p>
+
+<script>
+    function showAlert() {
+        alert("This is an alert message.");
+    }
+
+    function showConfirm() {
+        let answer = confirm("Do you want to continue?");
+
+        if (answer) {
+            document.getElementById("result").textContent =
+                "You clicked OK.";
+        } else {
+            document.getElementById("result").textContent =
+                "You clicked Cancel.";
+        }
+    }
+
+    function showPrompt() {
+        let name = prompt("Enter your name:");
+
+        if (name !== null && name !== "") {
+            document.getElementById("result").textContent =
+                "Hello, " + name;
+        }
+    }
+</script>
+
+</body>
+</html>

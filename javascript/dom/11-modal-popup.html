@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Popup</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Modal Popup</h1>
+    <p>DOM Manipulation Experiment 11</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <button class="btn" onclick="openModal()">Open Popup</button>
+
+        <div id="modal" style="display:none; margin-top:20px; padding:20px; background:#e8f0fe;">
+            <p>This is a modal popup message.</p>
+            <button class="btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+</main>
+
+<script>
+    function openModal() {
+        document.getElementById("modal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

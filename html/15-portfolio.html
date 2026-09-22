@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .portfolio-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-section h2 {
+            color: #1e3c72;
+            margin-bottom: 12px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-list li {
+            background: #dce8fa;
+            color: #1e3c72;
+            padding: 10px 16px;
+            border-radius: 20px;
+        }
+
+        .contact-link {
+            color: #1e3c72;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Portfolio</h1>
+        <p>HTML Experiment 15</p>
+    </header>
+
+    <main class="container">
+
+        <section class="portfolio-section">
+            <h2>About Me</h2>
+
+            <p>
+                Hello! I am a Computer Science student interested
+                in web development and programming.
+            </p>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>My Skills</h2>
+
+            <ul class="skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>My Projects</h2>
+
+            <ul>
+                <li>Personal Portfolio Website</li>
+                <li>Weather Application</li>
+                <li>Student Management System</li>
+            </ul>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Education</h2>
+
+            <p>
+                B.Tech Computer Science and Engineering
+            </p>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Contact</h2>
+
+            <p>
+                Email:
+                <a
+                    href="mailto:student@example.com"
+                    class="contact-link"
+                >
+                    student@example.com
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="contact-link"
+                >
+                    Visit GitHub
+                </a>
+            </p>
+        </section>
+
+        <a href="index.html" class="btn">Back</a>
+
+    </main>
+
+    <footer>
+        <p>HTML Experiment 15 - Personal Portfolio</p>
+    </footer>
+
+</body>
+</html>

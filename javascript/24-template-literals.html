@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Template Literals</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>24. Template Literals</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Student Details</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let name = "N.vishnu Vardhan";
+    let course = "Computer Science";
+    let year = 2;
+
+    let message = `
+        Student Name: ${name}<br>
+        Course: ${course}<br>
+        Year: ${year}
+    `;
+
+    document.getElementById("output").innerHTML = message;
+</script>
+
+</body>
+</html>

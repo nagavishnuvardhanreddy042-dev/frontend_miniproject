@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Restaurant</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8f0;
+        }
+
+        header {
+            background: #8b2e2e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            background: #b84c4c;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .item {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .item h2 {
+            color: #8b2e2e;
+        }
+
+        footer {
+            background: #8b2e2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Delicious Bites Restaurant</h1>
+        <p>Fresh Food, Great Taste</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="menu">
+
+        <div class="item">
+            <h2>Pizza</h2>
+            <p>Cheesy vegetable pizza.</p>
+            <strong>₹250</strong>
+        </div>
+
+        <div class="item">
+            <h2>Burger</h2>
+            <p>Fresh crispy vegetable burger.</p>
+            <strong>₹150</strong>
+        </div>
+
+        <div class="item">
+            <h2>Pasta</h2>
+            <p>Creamy Italian-style pasta.</p>
+            <strong>₹200</strong>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Visit us for delicious meals!</p>
+    </footer>
+
+</body>
+</html>

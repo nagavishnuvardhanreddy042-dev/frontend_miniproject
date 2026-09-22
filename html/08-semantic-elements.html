@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Elements</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        nav {
+            background: #162d59;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section,
+        article {
+            background: white;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            border-left: 5px solid #1e3c72;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Educational Website</h1>
+        <p>Semantic HTML Structure</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="home">
+            <h2>Home Section</h2>
+            <p>
+                Welcome to our educational website.
+                This page demonstrates semantic HTML elements.
+            </p>
+        </section>
+
+        <section id="about">
+            <h2>About Section</h2>
+
+            <article>
+                <h3>About HTML</h3>
+                <p>
+                    HTML provides the basic structure of a webpage.
+                    Semantic elements make the structure meaningful.
+                </p>
+            </article>
+
+            <article>
+                <h3>About CSS</h3>
+                <p>
+                    CSS is used to style and design webpages.
+                </p>
+            </article>
+        </section>
+
+        <section id="courses">
+            <h2>Courses</h2>
+            <p>HTML, CSS, JavaScript and Python courses are available.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: info@example.com</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Semantic HTML Footer</p>
+    </footer>
+
+</body>
+</html>

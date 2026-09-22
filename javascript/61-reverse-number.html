@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>61. Reverse a Number</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Reverse Number</h2>
+
+        <input type="number" id="number" placeholder="Enter number">
+        <br><br>
+
+        <button class="btn" onclick="reverseNumber()">
+            Reverse
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function reverseNumber() {
+        let number = document.getElementById("number").value;
+
+        let reversed = number.split("").reverse().join("");
+
+        document.getElementById("output").innerHTML =
+            "Reversed Number: " + reversed;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .quiz-box {
+            max-width: 550px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #f4f8f9;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: #1d5963;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d45880;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Quiz App</h1>
+        <p>JavaScript Mini Project</p>
+    </header>
+
+    <main class="container">
+
+        <div class="quiz-box">
+            <h2 id="question"></h2>
+
+            <div id="options"></div>
+
+            <p id="result"></p>
+        </div>
+
+        <br>
+
+        <a href="../../index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn">Back to Mini Projects</a>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Experiments</p>
+    </footer>
+
+    <script>
+        let questions = [
+            {
+                question: "Which language is used for web page interactivity?",
+                options: ["HTML", "CSS", "JavaScript", "SQL"],
+                answer: "JavaScript"
+            },
+            {
+                question: "Which symbol is used for comments in JavaScript?",
+                options: ["//", "<!-- -->", "#", "**"],
+                answer: "//"
+            },
+            {
+                question: "Which keyword declares a variable?",
+                options: ["var", "define", "int", "declare"],
+                answer: "var"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            if (currentQuestion >= questions.length) {
+                document.getElementById("question").textContent =
+                    "Quiz Completed!";
+
+                document.getElementById("options").innerHTML = "";
+
+                document.getElementById("result").textContent =
+                    `Your score is ${score}/${questions.length}`;
+
+                return;
+            }
+
+            let q = questions[currentQuestion];
+
+            document.getElementById("question").textContent =
+                q.question;
+
+            let optionsDiv = document.getElementById("options");
+            optionsDiv.innerHTML = "";
+
+            q.options.forEach(function (option) {
+                let button = document.createElement("button");
+                button.textContent = option;
+
+                button.onclick = function () {
+                    if (option === q.answer) {
+                        score++;
+                    }
+
+                    currentQuestion++;
+                    loadQuestion();
+                };
+
+                optionsDiv.appendChild(button);
+            });
+        }
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>

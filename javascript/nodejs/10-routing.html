@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 10 - Routing in Express.js</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Experiment 10: Routing in Express.js</h1>
+    </header>
+
+    <main class="content">
+
+        <h2>Aim</h2>
+        <p>
+            To create multiple routes in an Express.js application.
+        </p>
+
+        <h2>Theory</h2>
+        <p>
+            Routing determines how an application responds to client requests
+            for different URL paths. Express.js uses methods such as
+            app.get() to define routes.
+        </p>
+
+        <h2>Program</h2>
+        <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 5000;
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the Home Page");
+});
+
+app.get("/students", (req, res) => {
+    res.send("This is the Students Page");
+});
+
+app.get("/contact", (req, res) => {
+    res.send("This is the Contact Page");
+});
+
+app.listen(PORT, () => {
+    console.log(`Routing server running at http://localhost:${PORT}`);
+});
+        </pre>
+
+        <h2>Execution Command</h2>
+        <pre>node routing-demo.js</pre>
+
+        <h2>Available Routes</h2>
+        <ul>
+            <li>/ - Home Page</li>
+            <li>/students - Students Page</li>
+            <li>/contact - Contact Page</li>
+        </ul>
+
+        <h2>Sample Output</h2>
+        <pre>
+Routing server running at http://localhost:5000
+        </pre>
+
+        <h2>Result</h2>
+        <p>
+            Thus, multiple routes were successfully created and tested
+            using Express.js.
+        </p>
+
+        <br>
+
+        <a href="index.html" class="btn">
+            Back to Node.js Experiments
+        </a>
+
+    </main>
+
+</body>
+</html>

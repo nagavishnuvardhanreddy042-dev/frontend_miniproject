@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Throw Statement</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>44. Throw Statement</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Validate Age</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let age = 15;
+    let message = "";
+
+    try {
+        if (age < 18) {
+            throw new Error("Age must be 18 or above.");
+        }
+
+        message = "Eligible.";
+    } catch (error) {
+        message = error.message;
+    }
+
+    document.getElementById("output").innerHTML = message;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Event</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Change Event</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="CSE">Computer Science</option>
+            <option value="ECE">Electronics</option>
+            <option value="AIDS">AI and Data Science</option>
+        </select>
+
+        <p id="result"></p>
+    </div>
+</main>
+
+<script>
+    document.getElementById("course").addEventListener("change", function () {
+        document.getElementById("result").innerText =
+            "Selected Course: " + this.value;
+    });
+</script>
+
+</body>
+</html>

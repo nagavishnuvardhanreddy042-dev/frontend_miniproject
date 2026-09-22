@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 11 - Middleware</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 11: Middleware in Express.js</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To understand and implement middleware in an Express.js application.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                Middleware functions execute between the request and the response.
+                They can access the request object, response object, and the
+                next() function.
+            </p>
+
+            <h2>Syntax</h2>
+
+            <pre>
+app.use((req, res, next) => {
+    // Middleware code
+    next();
+});
+            </pre>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 7000;
+
+app.use((req, res, next) => {
+    console.log("Middleware executed");
+    next();
+});
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the Middleware Demo");
+});
+
+app.listen(PORT, () => {
+    console.log(`Middleware server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Command</h2>
+
+            <pre>node middleware-demo.js</pre>
+
+            <h2>Sample Console Output</h2>
+
+            <pre>
+Middleware server running at http://localhost:7000
+Middleware executed
+            </pre>
+
+            <h2>Browser Output</h2>
+
+            <p>
+                Welcome to the Middleware Demo
+            </p>
+
+            <h2>Explanation</h2>
+
+            <ul>
+                <li><b>app.use():</b> Registers middleware.</li>
+                <li><b>req:</b> Represents the client request.</li>
+                <li><b>res:</b> Represents the server response.</li>
+                <li><b>next():</b> Passes control to the next function.</li>
+                <li>The middleware runs before the route response.</li>
+            </ul>
+
+            <h2>Result</h2>
+
+            <p>
+                Thus, middleware was successfully implemented in Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

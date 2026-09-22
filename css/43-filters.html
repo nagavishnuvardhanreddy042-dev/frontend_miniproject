@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e3c72;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .blur {
+            filter: blur(3px);
+        }
+
+        .brightness {
+            filter: brightness(150%);
+        }
+
+        .sepia {
+            filter: sepia(100%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Image Filters</h1>
+
+    <div class="gallery">
+
+        <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+            alt="Nature"
+            class="grayscale">
+
+        <img
+            src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e"
+            alt="Plant"
+            class="blur">
+
+        <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+            alt="Mountain"
+            class="brightness">
+
+        <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+            alt="Forest"
+            class="sepia">
+
+    </div>
+
+</body>
+</html>

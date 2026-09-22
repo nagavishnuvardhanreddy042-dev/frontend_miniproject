@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Blog Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        header {
+            background: #1e3c72;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .main-news,
+        .side-news {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .article {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .article h2 {
+            color: #1e3c72;
+        }
+
+        .article p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Daily News and Blogs</h1>
+    </header>
+
+    <div class="blog-container">
+
+        <main class="main-news">
+            <h2>Main News</h2>
+
+            <div class="article">
+                <h2>Technology Advances in 2026</h2>
+                <p>
+                    New technologies are changing education, business and communication.
+                </p>
+            </div>
+
+            <div class="article">
+                <h2>Importance of Digital Learning</h2>
+                <p>
+                    Digital platforms help students learn from anywhere.
+                </p>
+            </div>
+
+        </main>
+
+        <aside class="side-news">
+            <h2>Latest Updates</h2>
+
+            <div class="article">
+                <h3>College Events</h3>
+                <p>Annual technical fest announced.</p>
+            </div>
+
+            <div class="article">
+                <h3>Sports News</h3>
+                <p>Inter-college competitions begin soon.</p>
+            </div>
+
+        </aside>
+
+    </div>
+
+</body>
+</html>

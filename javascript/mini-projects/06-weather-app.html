@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .weather-box {
+            max-width: 450px;
+            margin: 30px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: #f4f8f9;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        input {
+            padding: 12px;
+            width: 70%;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #1d5963;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Weather App</h1>
+        <p>JavaScript Mini Project</p>
+    </header>
+
+    <main class="container">
+
+        <div class="weather-box">
+            <h2>Check Weather</h2>
+
+            <input type="text" id="city"
+                   placeholder="Enter city name">
+
+            <br>
+
+            <button onclick="getWeather()">Get Weather</button>
+
+            <div id="result"></div>
+        </div>
+
+        <br>
+
+        <a href="../../index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn">Back to Mini Projects</a>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Experiments</p>
+    </footer>
+
+    <script>
+        function getWeather() {
+            let city = document.getElementById("city").value.trim();
+
+            if (city === "") {
+                alert("Please enter a city");
+                return;
+            }
+
+            document.getElementById("result").innerHTML =
+                `<p>Weather information for <b>${city}</b></p>
+                 <p>This demo can be connected to a weather API.</p>`;
+        }
+    </script>
+
+</body>
+</html>

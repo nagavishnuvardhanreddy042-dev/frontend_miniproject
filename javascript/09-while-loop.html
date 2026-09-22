@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>While Loop</h1>
+    <p>Printing numbers using a while loop</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>While Loop Example</h2>
+
+        <p id="output"></p>
+
+        <script>
+            let i = 1;
+            let result = "";
+
+            while (i <= 5) {
+                result += "Number: " + i + "<br>";
+                i++;
+            }
+
+            document.getElementById("output").innerHTML = result;
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

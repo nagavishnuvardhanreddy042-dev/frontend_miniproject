@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Optional Chaining</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>40. Optional Chaining</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Access Object Safely</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let student = {
+        name: "N.vishnu Vardhan",
+        address: {
+            city: "Chennai"
+        }
+    };
+
+    let city = student.address?.city;
+
+    document.getElementById("output").innerHTML =
+        "Student Name: " + student.name +
+        "<br>City: " + city;
+</script>
+
+</body>
+</html>

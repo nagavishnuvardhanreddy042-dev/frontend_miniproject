@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Every Method</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>33. Every Method</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Check All Numbers</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let marks = [80, 75, 90, 85];
+
+    let result = marks.every(function(mark) {
+        return mark >= 40;
+    });
+
+    document.getElementById("output").innerHTML =
+        "Did every student pass? " + result;
+</script>
+
+</body>
+</html>

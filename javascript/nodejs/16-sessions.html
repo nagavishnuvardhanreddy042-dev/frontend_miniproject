@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 16 - Sessions</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 16: Sessions in Express.js</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To understand and implement sessions in an Express.js application.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                Sessions are used to store user information temporarily on the
+                server while the user is visiting a website.
+            </p>
+
+            <h2>Required Package</h2>
+
+            <pre>npm install express-session</pre>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+const session = require("express-session");
+
+const app = express();
+
+const PORT = 7500;
+
+app.use(session({
+    secret: "my-secret-key",
+    resave: false,
+    saveUninitialized: true
+}));
+
+app.get("/", (req, res) => {
+    req.session.studentName = "Akshara";
+    res.send("Session data has been stored.");
+});
+
+app.get("/read-session", (req, res) => {
+    res.send("Session Value: " + req.session.studentName);
+});
+
+app.listen(PORT, () => {
+    console.log(`Session server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Commands</h2>
+
+            <pre>
+npm install express-session
+node sessions.js
+            </pre>
+
+            <h2>Browser URLs</h2>
+
+            <pre>
+http://localhost:7500
+http://localhost:7500/read-session
+            </pre>
+
+            <h2>Explanation</h2>
+
+            <ul>
+                <li><b>express-session:</b> Provides session functionality.</li>
+                <li><b>req.session:</b> Stores and reads session data.</li>
+                <li><b>secret:</b> Used to secure the session.</li>
+                <li>Session data is maintained while the session is active.</li>
+            </ul>
+
+            <h2>Result</h2>
+
+            <p>
+                Thus, sessions were successfully implemented using Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

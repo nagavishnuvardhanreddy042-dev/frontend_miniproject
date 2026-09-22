@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Accordion</h1>
+    <p>DOM Manipulation Experiment 12</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <button class="btn" onclick="toggleContent()">
+            Show / Hide Answer
+        </button>
+
+        <p id="answer" style="display:none;">
+            DOM stands for Document Object Model.
+        </p>
+    </div>
+</main>
+
+<script>
+    function toggleContent() {
+        let answer = document.getElementById("answer");
+
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+        } else {
+            answer.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

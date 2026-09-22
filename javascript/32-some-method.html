@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Some Method</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>32. Some Method</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Check Any Number</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let marks = [45, 55, 75, 30];
+
+    let result = marks.some(function(mark) {
+        return mark >= 70;
+    });
+
+    document.getElementById("output").innerHTML =
+        "Are any marks greater than or equal to 70? " + result;
+</script>
+
+</body>
+</html>

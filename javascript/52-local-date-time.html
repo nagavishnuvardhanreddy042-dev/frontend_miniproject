@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Date and Time</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>52. Local Date and Time</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Current Date and Time</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let currentDate = new Date();
+
+    document.getElementById("output").innerHTML =
+        "Current Date and Time: " + currentDate;
+</script>
+
+</body>
+</html>

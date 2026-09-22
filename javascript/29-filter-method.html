@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Method</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>29. Filter Method</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Find Even Numbers</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    let evenNumbers = numbers.filter(function(number) {
+        return number % 2 === 0;
+    });
+
+    document.getElementById("output").innerHTML =
+        "Original Numbers: " + numbers.join(", ") +
+        "<br>Even Numbers: " + evenNumbers.join(", ");
+</script>
+
+</body>
+</html>

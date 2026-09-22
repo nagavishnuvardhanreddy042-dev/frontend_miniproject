@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef4ff;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 550px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h1 {
+            color: #1e3c72;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>College Admission Form</h1>
+
+    <form id="admissionForm">
+
+        <label>Full Name:</label>
+        <input type="text" id="name">
+
+        <label>Email:</label>
+        <input type="email" id="email">
+
+        <label>Age:</label>
+        <input type="number" id="age">
+
+        <label>Course:</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="B.Tech CSE">B.Tech CSE</option>
+            <option value="B.Tech ECE">B.Tech ECE</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="B.Com">B.Com</option>
+        </select>
+
+        <label>Marks Percentage:</label>
+        <input type="number" id="marks">
+
+        <button type="submit">Apply for Admission</button>
+    </form>
+
+    <p id="message"></p>
+</div>
+
+<script>
+    document.getElementById("admissionForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let age = Number(document.getElementById("age").value);
+        let course = document.getElementById("course").value;
+        let marks = Number(document.getElementById("marks").value);
+        let message = document.getElementById("message");
+
+        if (name === "" || email === "" || course === "") {
+            message.textContent = "Please fill all required fields.";
+            message.style.color = "red";
+        }
+        else if (age < 17 || age > 30) {
+            message.textContent = "Age must be between 17 and 30.";
+            message.style.color = "red";
+        }
+        else if (marks < 0 || marks > 100) {
+            message.textContent = "Enter valid marks between 0 and 100.";
+            message.style.color = "red";
+        }
+        else {
+            message.textContent = "Admission form submitted successfully!";
+            message.style.color = "green";
+        }
+    });
+</script>
+
+</body>
+</html>

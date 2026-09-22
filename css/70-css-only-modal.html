@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Only Modal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f7fb;
+            padding: 50px;
+        }
+
+        .open-button {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            width: 350px;
+            padding: 30px;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .close-button {
+            display: inline-block;
+            margin-top: 15px;
+            background: #1e3c72;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #modal-toggle:checked ~ .modal {
+            display: flex;
+        }
+
+        #modal-toggle {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS-Only Modal Window</h1>
+
+    <label for="modal-toggle" class="open-button">
+        Open Modal
+    </label>
+
+    <input type="checkbox" id="modal-toggle">
+
+    <div class="modal">
+
+        <div class="modal-content">
+            <h2>Hello!</h2>
+            <p>
+                This modal is created using only HTML and CSS.
+            </p>
+
+            <label for="modal-toggle" class="close-button">
+                Close
+            </label>
+        </div>
+
+    </div>
+
+</body>
+</html>

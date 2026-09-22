@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 15 - Cookies</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 15: Cookies in Express.js</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To understand and implement cookies in an Express.js application.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                Cookies are small pieces of data stored in the user's browser.
+                They help websites remember user information.
+            </p>
+
+            <h2>Required Package</h2>
+
+            <pre>npm install cookie-parser</pre>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+const cookieParser = require("cookie-parser");
+
+const app = express();
+
+const PORT = 7400;
+
+app.use(cookieParser());
+
+app.get("/", (req, res) => {
+    res.cookie("studentName", "Akshara");
+    res.send("Cookie has been created successfully.");
+});
+
+app.get("/read-cookie", (req, res) => {
+    res.send("Cookie Value: " + req.cookies.studentName);
+});
+
+app.listen(PORT, () => {
+    console.log(`Cookie server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Commands</h2>
+
+            <pre>
+npm install cookie-parser
+node cookies.js
+            </pre>
+
+            <h2>Sample Console Output</h2>
+
+            <pre>
+Cookie server running at http://localhost:7400
+            </pre>
+
+            <h2>Browser URLs</h2>
+
+            <pre>
+http://localhost:7400
+http://localhost:7400/read-cookie
+            </pre>
+
+            <h2>Explanation</h2>
+
+            <ul>
+                <li><b>cookie-parser:</b> Reads cookies from requests.</li>
+                <li><b>res.cookie():</b> Creates a cookie.</li>
+                <li><b>req.cookies:</b> Reads cookie values.</li>
+                <li>Cookies are stored in the browser.</li>
+            </ul>
+
+            <h2>Result</h2>
+
+            <p>
+                Thus, cookies were successfully created and read using Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

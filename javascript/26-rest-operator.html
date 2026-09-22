@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rest Operator</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>26. Rest Operator</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Adding Multiple Numbers</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function addNumbers(...numbers) {
+        let total = 0;
+
+        for (let number of numbers) {
+            total += number;
+        }
+
+        return total;
+    }
+
+    let result = addNumbers(10, 20, 30, 40);
+
+    document.getElementById("output").innerHTML =
+        "Total: " + result;
+</script>
+
+</body>
+</html>

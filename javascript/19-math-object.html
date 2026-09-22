@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>JavaScript Math Object</h1>
+    <p>Using mathematical functions</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Math Object Example</h2>
+        <p id="output"></p>
+
+        <script>
+            let number = 25;
+
+            document.getElementById("output").innerHTML =
+                "Square Root: " + Math.sqrt(number) + "<br>" +
+                "Power: " + Math.pow(number, 2) + "<br>" +
+                "Random Number: " + Math.random().toFixed(2) + "<br>" +
+                "Maximum: " + Math.max(10, 25, 15) + "<br>" +
+                "Minimum: " + Math.min(10, 25, 15);
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nullish Coalescing</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>41. Nullish Coalescing Operator</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Default Value Example</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let studentName = null;
+
+    let result = studentName ?? "Guest Student";
+
+    document.getElementById("output").innerHTML =
+        "Student Name: " + result;
+</script>
+
+</body>
+</html>

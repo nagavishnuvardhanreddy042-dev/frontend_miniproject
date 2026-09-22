@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Checker</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>57. Prime Number Checker</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Check Prime Number</h2>
+
+        <input type="number" id="number" placeholder="Enter number">
+        <br><br>
+
+        <button class="btn" onclick="checkPrime()">
+            Check
+        </button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function checkPrime() {
+        let number = Number(document.getElementById("number").value);
+        let isPrime = true;
+
+        if (number < 2) {
+            isPrime = false;
+        }
+
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        document.getElementById("output").innerHTML =
+            isPrime
+                ? number + " is a prime number."
+                : number + " is not a prime number.";
+    }
+</script>
+
+</body>
+</html>

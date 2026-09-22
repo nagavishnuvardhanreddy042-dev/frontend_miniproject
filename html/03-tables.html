@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #555;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #1e3c72;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #eef4ff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Tables</h1>
+        <p>Experiment 3: Rows, Columns, Borders and Merged Cells</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+            <h2>Student Marks Table</h2>
+
+            <table>
+                <tr>
+                    <th rowspan="2">Roll No</th>
+                    <th rowspan="2">Name</th>
+                    <th colspan="3">Marks</th>
+                </tr>
+
+                <tr>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>JavaScript</th>
+                </tr>
+
+                <tr>
+                    <td>101</td>
+                    <td>Akshara</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>88</td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Rahul</td>
+                    <td>80</td>
+                    <td>82</td>
+                    <td>79</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><strong>Total Students</strong></td>
+                    <td colspan="3">2</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <a href="index.html" class="btn">Back</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>HTML Experiment 3</p>
+    </footer>
+
+</body>
+</html>

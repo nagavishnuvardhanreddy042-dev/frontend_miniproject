@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Form Data</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Display Form Data</h1>
+    <p>DOM Manipulation Experiment 7</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <input type="text" id="username" placeholder="Enter your name">
+
+        <br><br>
+
+        <button class="btn" onclick="displayData()">Display</button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function displayData() {
+        let name = document.getElementById("username").value;
+
+        document.getElementById("output").innerText =
+            "Entered Name: " + name;
+    }
+</script>
+
+</body>
+</html>

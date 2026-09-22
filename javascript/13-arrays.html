@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>JavaScript Arrays</h1>
+    <p>Storing multiple values in an array</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Array Example</h2>
+        <p id="output"></p>
+
+        <script>
+            let subjects = ["HTML", "CSS", "JavaScript", "Java"];
+
+            document.getElementById("output").innerHTML =
+                "Subjects: " + subjects.join(", ") + "<br>" +
+                "First Subject: " + subjects[0] + "<br>" +
+                "Total Subjects: " + subjects.length;
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

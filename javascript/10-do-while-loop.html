@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Do While Loop</h1>
+    <p>Executing a loop at least once</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Do While Example</h2>
+
+        <p id="output"></p>
+
+        <script>
+            let i = 1;
+            let result = "";
+
+            do {
+                result += "Value: " + i + "<br>";
+                i++;
+            } while (i <= 5);
+
+            document.getElementById("output").innerHTML = result;
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

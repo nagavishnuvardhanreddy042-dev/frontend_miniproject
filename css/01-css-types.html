@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Types of CSS</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-style {
+            background-color: #dce8fa;
+            color: #1e3c72;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+        }
+
+        .internal-style h2 {
+            color: #d45880;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Three Types of CSS</h1>
+        <p>Experiment 1: Inline, Internal and External CSS</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <!-- Inline CSS -->
+            <h2 style="color: #d45880; background-color: #fff0f5; padding: 15px;">
+                Inline CSS
+            </h2>
+
+            <p>
+                Inline CSS is written directly inside the style
+                attribute of an HTML element.
+            </p>
+
+            <!-- Internal CSS -->
+            <div class="internal-style">
+                <h2>Internal CSS</h2>
+
+                <p>
+                    Internal CSS is written inside the
+                    &lt;style&gt; tag in the HTML head section.
+                </p>
+            </div>
+
+            <!-- External CSS -->
+            <div>
+                <h2>External CSS</h2>
+
+                <p>
+                    External CSS is written in a separate CSS file
+                    and connected using the link tag.
+                </p>
+
+                <p class="description">
+                    This card, header, buttons and page layout
+                    are styled using the external style.css file.
+                </p>
+            </div>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to CSS Programs
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>CSS Experiment 1</p>
+    </footer>
+
+</body>
+</html>

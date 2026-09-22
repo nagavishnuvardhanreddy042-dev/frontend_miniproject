@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First Design</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: #1e3c72;
+        }
+
+        /* Tablet and desktop styles */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .card {
+                flex: 1;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Mobile-First Design</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Structure of webpages</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Styling of webpages</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Interaction in webpages</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

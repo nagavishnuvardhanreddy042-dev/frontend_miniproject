@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>55. Random Number Generator</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Generate Random Number</h2>
+        <button class="btn" onclick="generateNumber()">
+            Generate
+        </button>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function generateNumber() {
+        let number = Math.floor(Math.random() * 100) + 1;
+
+        document.getElementById("output").innerHTML =
+            "Random Number: " + number;
+    }
+</script>
+
+</body>
+</html>

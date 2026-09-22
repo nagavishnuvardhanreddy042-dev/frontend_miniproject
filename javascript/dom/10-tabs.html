@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Tabs</h1>
+    <p>DOM Manipulation Experiment 10</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <button class="btn" onclick="showTab('tab1')">Tab 1</button>
+        <button class="btn" onclick="showTab('tab2')">Tab 2</button>
+
+        <p id="tab1">This is content of Tab 1.</p>
+        <p id="tab2" style="display:none;">This is content of Tab 2.</p>
+    </div>
+</main>
+
+<script>
+    function showTab(tabName) {
+        document.getElementById("tab1").style.display = "none";
+        document.getElementById("tab2").style.display = "none";
+
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+
+</body>
+</html>

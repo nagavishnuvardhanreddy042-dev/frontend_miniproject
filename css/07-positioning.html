@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+            height: 1200px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        .box {
+            width: 220px;
+            height: 80px;
+            padding: 20px;
+            margin: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .static {
+            position: static;
+            background-color: #777;
+        }
+
+        .relative {
+            position: relative;
+            left: 40px;
+            background-color: #2a5298;
+        }
+
+        .absolute-container {
+            position: relative;
+            width: 500px;
+            height: 180px;
+            background-color: #d9e8ff;
+            margin: 30px auto;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background-color: #d45880;
+        }
+
+        .fixed {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #1e3c72;
+            margin: 0;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: #4c956c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Positioning</h1>
+
+    <div class="box static">
+        Static Position
+    </div>
+
+    <div class="box relative">
+        Relative Position
+    </div>
+
+    <div class="absolute-container">
+        <div class="box absolute">
+            Absolute Position
+        </div>
+    </div>
+
+    <div class="box sticky">
+        Sticky Position - Scroll the Page
+    </div>
+
+    <div class="box fixed">
+        Fixed Position
+    </div>
+
+</body>
+</html>

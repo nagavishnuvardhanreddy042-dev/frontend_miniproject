@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Event</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Load Event</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <p id="result">Loading page...</p>
+    </div>
+</main>
+
+<script>
+    window.addEventListener("load", function () {
+        document.getElementById("result").innerText =
+            "Page loaded successfully!";
+    });
+</script>
+
+</body>
+</html>

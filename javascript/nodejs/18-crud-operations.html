@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 18 - CRUD Operations</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 18: CRUD Operations</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To implement Create, Read, Update, and Delete operations
+                using Node.js and Express.js.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                CRUD stands for Create, Read, Update, and Delete.
+                These are the four basic operations performed on data
+                in an application.
+            </p>
+
+            <ul>
+                <li><b>Create:</b> Add new data</li>
+                <li><b>Read:</b> Retrieve existing data</li>
+                <li><b>Update:</b> Modify existing data</li>
+                <li><b>Delete:</b> Remove data</li>
+            </ul>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 7600;
+
+app.use(express.json());
+
+let students = [
+    { id: 1, name: "Akshara" }
+];
+
+// Read students
+app.get("/students", (req, res) => {
+    res.json(students);
+});
+
+// Create student
+app.post("/students", (req, res) => {
+    const student = {
+        id: students.length + 1,
+        name: req.body.name
+    };
+
+    students.push(student);
+    res.json(student);
+});
+
+// Update student
+app.put("/students/:id", (req, res) => {
+    const student = students.find(
+        item => item.id == req.params.id
+    );
+
+    if (student) {
+        student.name = req.body.name;
+        res.json(student);
+    } else {
+        res.status(404).send("Student not found");
+    }
+});
+
+// Delete student
+app.delete("/students/:id", (req, res) => {
+    students = students.filter(
+        item => item.id != req.params.id
+    );
+
+    res.send("Student deleted successfully");
+});
+
+app.listen(PORT, () => {
+    console.log(`CRUD server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Command</h2>
+
+            <pre>node crud-operations.js</pre>
+
+            <h2>Browser URL</h2>
+
+            <pre>http://localhost:7600/students</pre>
+
+            <h2>Sample Output</h2>
+
+            <pre>
+[
+    {
+        "id": 1,
+        "name": "Akshara"
+    }
+]
+            </pre>
+
+            <h2>CRUD Routes</h2>
+
+            <ul>
+                <li><b>GET /students</b> - Read students</li>
+                <li><b>POST /students</b> - Create student</li>
+                <li><b>PUT /students/:id</b> - Update student</li>
+                <li><b>DELETE /students/:id</b> - Delete student</li>
+            </ul>
+
+            <h2>Result</h2>
+            <p>
+                Thus, CRUD operations were successfully implemented
+                using Node.js and Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

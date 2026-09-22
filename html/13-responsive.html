@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        .responsive-layout {
+            display: flex;
+            gap: 20px;
+        }
+
+        .responsive-column {
+            flex: 1;
+            background: #e9f1ff;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .responsive-layout {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .responsive-column {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Responsive Webpage</h1>
+        <p>Experiment 13: Media Queries and Responsive Layout</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+            <h2>Responsive Design Example</h2>
+
+            <p>
+                Resize the browser window to see how the layout
+                changes according to the screen size.
+            </p>
+
+            <div class="responsive-layout">
+
+                <div class="responsive-column">
+                    <h3>Column 1</h3>
+                    <p>This column adjusts on smaller screens.</p>
+                </div>
+
+                <div class="responsive-column">
+                    <h3>Column 2</h3>
+                    <p>This column moves below the first column.</p>
+                </div>
+
+                <div class="responsive-column">
+                    <h3>Column 3</h3>
+                    <p>This layout is mobile-friendly.</p>
+                </div>
+
+            </div>
+
+            <br>
+
+            <a href="index.html" class="btn">Back</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>HTML Experiment 13</p>
+    </footer>
+
+</body>
+</html>

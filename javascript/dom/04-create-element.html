@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Create an Element</h1>
+    <p>DOM Manipulation Experiment 4</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <div id="output"></div>
+
+        <button class="btn" onclick="createElementDemo()">
+            Create Element
+        </button>
+    </div>
+</main>
+
+<script>
+    function createElementDemo() {
+        let paragraph = document.createElement("p");
+
+        paragraph.innerText = "This paragraph was created using JavaScript.";
+
+        document.getElementById("output").appendChild(paragraph);
+    }
+</script>
+
+</body>
+</html>

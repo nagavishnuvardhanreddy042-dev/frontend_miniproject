@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Calc Function</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        header {
+            width: calc(100% - 40px);
+            margin: 20px;
+            background: #1e3c72;
+            color: white;
+            padding: 25px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .container {
+            width: calc(100% - 80px);
+            margin: auto;
+            background: white;
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .box {
+            width: calc(50% - 20px);
+            display: inline-block;
+            background: #dce8f7;
+            padding: 25px;
+            margin: 10px;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        @media (max-width: 600px) {
+            .box {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CSS calc() Function</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>Box One</h2>
+            <p>Width is calculated using calc().</p>
+        </div>
+
+        <div class="box">
+            <h2>Box Two</h2>
+            <p>This box also uses calculated width.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

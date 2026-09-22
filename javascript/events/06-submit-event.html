@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Event</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Submit Event</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Enter your name">
+            <br><br>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+
+        <p id="result"></p>
+    </div>
+</main>
+
+<script>
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+
+        document.getElementById("result").innerText =
+            "Form submitted by " + name;
+    });
+</script>
+
+</body>
+</html>

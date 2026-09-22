@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select an HTML Element</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Select an HTML Element</h1>
+        <p>DOM Manipulation Experiment 1</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+            <h2 id="heading">Original Heading</h2>
+
+            <button class="btn" onclick="selectElement()">
+                Select Element
+            </button>
+
+            <p id="result"></p>
+        </div>
+
+    </main>
+
+    <script>
+        function selectElement() {
+            let element = document.getElementById("heading");
+
+            document.getElementById("result").innerText =
+                "Selected Element: " + element.innerText;
+        }
+    </script>
+
+</body>
+</html>

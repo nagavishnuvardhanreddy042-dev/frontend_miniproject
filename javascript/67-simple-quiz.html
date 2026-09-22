@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>67. Simple Quiz</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>JavaScript Quiz</h2>
+
+        <p>Which keyword is used to declare a variable?</p>
+
+        <button class="btn" onclick="checkAnswer('var')">var</button>
+        <button class="btn" onclick="checkAnswer('print')">print</button>
+        <button class="btn" onclick="checkAnswer('display')">display</button>
+
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    function checkAnswer(answer) {
+        if (answer === "var") {
+            document.getElementById("output").innerHTML =
+                "Correct Answer!";
+        } else {
+            document.getElementById("output").innerHTML =
+                "Wrong Answer. Try again.";
+        }
+    }
+</script>
+
+</body>
+</html>

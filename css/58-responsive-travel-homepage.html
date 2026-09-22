@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Travel Homepage</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef7fb;
+        }
+
+        header {
+            background: #176b87;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            background: #2389a8;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: #ccecf5;
+        }
+
+        .hero h1 {
+            color: #176b87;
+            font-size: 40px;
+        }
+
+        .destinations {
+            display: flex;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .destination {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #176b87;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .destinations {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explore the World</h1>
+        <p>Your journey begins here</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Discover Amazing Places</h1>
+        <p>Travel, explore and create unforgettable memories.</p>
+    </section>
+
+    <section class="destinations">
+
+        <div class="destination">
+            <h2>Paris</h2>
+            <p>Experience art, culture and beautiful architecture.</p>
+        </div>
+
+        <div class="destination">
+            <h2>Goa</h2>
+            <p>Enjoy beaches, sunshine and relaxing holidays.</p>
+        </div>
+
+        <div class="destination">
+            <h2>Manali</h2>
+            <p>Explore mountains, snow and natural beauty.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Travel Smart. Travel Happy.</p>
+    </footer>
+
+</body>
+</html>

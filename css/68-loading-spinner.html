@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Spinner</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f7fb;
+            padding: 60px;
+        }
+
+        .spinner {
+            width: 70px;
+            height: 70px;
+            border: 8px solid #dce8f7;
+            border-top: 8px solid #1e3c72;
+            border-radius: 50%;
+            margin: 30px auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Loading...</h1>
+
+    <div class="spinner"></div>
+
+    <p>Please wait while the content loads.</p>
+
+</body>
+</html>

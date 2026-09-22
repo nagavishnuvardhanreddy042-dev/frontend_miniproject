@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e3c72;
+        }
+
+        .animated-box {
+            width: 150px;
+            height: 150px;
+            background-color: #1e3c72;
+            color: white;
+            margin: 80px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+            animation: moveBox 3s infinite alternate;
+        }
+
+        @keyframes moveBox {
+            from {
+                transform: translateX(-150px);
+                background-color: #1e3c72;
+            }
+
+            to {
+                transform: translateX(150px);
+                background-color: #d45880;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Animations</h1>
+
+    <div class="animated-box">
+        Moving Box
+    </div>
+
+</body>
+</html>

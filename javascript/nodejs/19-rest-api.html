@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 19 - REST API</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 19: REST API</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To create a simple REST API using Node.js and Express.js.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                REST API allows applications to communicate with each other
+                using HTTP methods. Data is commonly returned in JSON format.
+            </p>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 7700;
+
+app.get("/api/student", (req, res) => {
+    res.json({
+        id: 1,
+        name: "Akshara",
+        course: "Computer Science"
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`REST API running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Command</h2>
+
+            <pre>node rest-api.js</pre>
+
+            <h2>Browser URL</h2>
+
+            <pre>http://localhost:7700/api/student</pre>
+
+            <h2>Sample Output</h2>
+
+            <pre>
+{
+    "id": 1,
+    "name": "Akshara",
+    "course": "Computer Science"
+}
+            </pre>
+
+            <h2>Explanation</h2>
+
+            <ul>
+                <li><b>app.get():</b> Creates a GET API endpoint.</li>
+                <li><b>/api/student:</b> API route.</li>
+                <li><b>res.json():</b> Sends JSON data to the client.</li>
+                <li><b>PORT 7700:</b> Server runs on port 7700.</li>
+            </ul>
+
+            <h2>Result</h2>
+            <p>
+                Thus, a simple REST API was successfully created using
+                Node.js and Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

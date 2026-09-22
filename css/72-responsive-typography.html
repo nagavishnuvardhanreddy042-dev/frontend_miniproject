@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 8vw;
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        h2 {
+            font-size: 5vw;
+            color: #2a5298;
+        }
+
+        p {
+            font-size: 2vw;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 12vw;
+            }
+
+            h2 {
+                font-size: 8vw;
+            }
+
+            p {
+                font-size: 5vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Typography</h1>
+
+    <h2>Resize the Browser Window</h2>
+
+    <p>
+        The font size changes according to the screen width.
+        This makes the text responsive on different devices.
+    </p>
+
+</body>
+</html>

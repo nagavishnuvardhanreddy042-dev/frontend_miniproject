@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Video</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Audio and Video</h1>
+        <p>Experiment 6: HTML Multimedia Elements</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+            <h2>Audio Example</h2>
+
+            <audio controls>
+                <source
+                    src="https://www.w3schools.com/html/horse.ogg"
+                    type="audio/ogg"
+                >
+                <source
+                    src="https://www.w3schools.com/html/horse.mp3"
+                    type="audio/mpeg"
+                >
+                Your browser does not support the audio element.
+            </audio>
+
+            <br><br>
+
+            <h2>Video Example</h2>
+
+            <video width="500" max-width="100%" controls style="max-width: 100%;">
+                <source
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    type="video/mp4"
+                >
+                Your browser does not support the video element.
+            </video>
+
+            <br><br>
+
+            <a href="index.html" class="btn">Back</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>HTML Experiment 6</p>
+    </footer>
+
+</body>
+</html>

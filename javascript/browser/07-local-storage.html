@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+
+<h1>Local Storage Example</h1>
+
+<input type="text" id="username" placeholder="Enter your name">
+
+<button onclick="saveData()">Save</button>
+<button onclick="getData()">Get Data</button>
+<button onclick="clearData()">Clear</button>
+
+<p id="result"></p>
+
+<script>
+    function saveData() {
+        let username = document.getElementById("username").value;
+
+        localStorage.setItem("username", username);
+
+        document.getElementById("result").textContent =
+            "Data saved successfully.";
+    }
+
+    function getData() {
+        let username = localStorage.getItem("username");
+
+        document.getElementById("result").textContent =
+            username ? "Stored Name: " + username : "No data found.";
+    }
+
+    function clearData() {
+        localStorage.removeItem("username");
+
+        document.getElementById("result").textContent =
+            "Data cleared.";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        form {
+            max-width: 600px;
+            margin: auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2a5298;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Student Registration Form</h1>
+        <p>Experiment 5: HTML Form Elements</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+            <form>
+
+                <label for="fullname">Full Name</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter phone number"
+                >
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+
+                <label>Gender</label>
+
+                <input type="radio" name="gender" value="male">
+                Male
+
+                <input type="radio" name="gender" value="female">
+                Female
+
+                <input type="radio" name="gender" value="other">
+                Other
+
+                <label for="course">Select Course</label>
+
+                <select id="course" name="course">
+                    <option value="">Select a course</option>
+                    <option value="cse">Computer Science</option>
+                    <option value="ece">Electronics</option>
+                    <option value="eee">Electrical</option>
+                    <option value="mech">Mechanical</option>
+                </select>
+
+                <label>Skills</label>
+
+                <input type="checkbox" name="skill" value="html">
+                HTML
+
+                <input type="checkbox" name="skill" value="css">
+                CSS
+
+                <input type="checkbox" name="skill" value="javascript">
+                JavaScript
+
+                <label for="address">Address</label>
+
+                <textarea
+                    id="address"
+                    name="address"
+                    rows="4"
+                    placeholder="Enter your address"
+                ></textarea>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+
+            </form>
+
+            <br>
+
+            <a href="index.html" class="btn">Back</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>HTML Experiment 5</p>
+    </footer>
+
+</body>
+</html>

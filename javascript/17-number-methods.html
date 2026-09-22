@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Number Methods</h1>
+    <p>Using JavaScript number functions</p>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Number Methods Example</h2>
+        <p id="output"></p>
+
+        <script>
+            let number = 45.6789;
+
+            document.getElementById("output").innerHTML =
+                "Original Number: " + number + "<br>" +
+                "Fixed to 2 decimals: " + number.toFixed(2) + "<br>" +
+                "Integer Value: " + Math.floor(number) + "<br>" +
+                "Rounded Value: " + Math.round(number);
+        </script>
+
+        <br>
+        <a href="index.html" class="btn">Back to JavaScript Programs</a>
+    </div>
+</main>
+
+<footer>
+    <p>JavaScript Practical Experiments</p>
+</footer>
+
+</body>
+</html>

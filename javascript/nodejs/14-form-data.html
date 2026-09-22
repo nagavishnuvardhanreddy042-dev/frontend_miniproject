@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiment 14 - Form Data</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Experiment 14: Handling Form Data</h1>
+        <p>Node.js and Express.js Practical Program</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+
+            <h2>Aim</h2>
+            <p>
+                To receive and process form data submitted by the client
+                using Express.js.
+            </p>
+
+            <h2>Theory</h2>
+            <p>
+                Express.js uses express.urlencoded() middleware to read
+                data submitted through HTML forms.
+            </p>
+
+            <h2>Program</h2>
+
+            <pre>
+const express = require("express");
+
+const app = express();
+
+const PORT = 7300;
+
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+    res.send(`
+        &lt;h1&gt;Student Form&lt;/h1&gt;
+        &lt;form method="POST" action="/submit"&gt;
+            &lt;input type="text" name="studentName"
+            placeholder="Enter your name" required&gt;
+            &lt;br&gt;&lt;br&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    `);
+});
+
+app.post("/submit", (req, res) => {
+    res.send("Welcome, " + req.body.studentName);
+});
+
+app.listen(PORT, () => {
+    console.log(`Form server running at http://localhost:${PORT}`);
+});
+            </pre>
+
+            <h2>Execution Command</h2>
+
+            <pre>node form-data.js</pre>
+
+            <h2>Sample Console Output</h2>
+
+            <pre>
+Form server running at http://localhost:7300
+            </pre>
+
+            <h2>Browser URL</h2>
+
+            <pre>http://localhost:7300</pre>
+
+            <h2>Explanation</h2>
+
+            <ul>
+                <li><b>express.urlencoded():</b> Reads form data.</li>
+                <li><b>req.body:</b> Contains submitted form values.</li>
+                <li><b>app.post():</b> Handles form submission.</li>
+                <li><b>res.send():</b> Sends the result to the browser.</li>
+            </ul>
+
+            <h2>Result</h2>
+
+            <p>
+                Thus, form data was successfully received and processed
+                using Express.js.
+            </p>
+
+            <br>
+
+            <a href="index.html" class="btn">
+                Back to Node.js Experiments
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Node.js Backend Practical Experiments</p>
+    </footer>
+
+</body>
+
+</html>

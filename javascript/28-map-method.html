@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Method</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>28. Map Method</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Double Each Number</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let numbers = [1, 2, 3, 4, 5];
+
+    let doubledNumbers = numbers.map(function(number) {
+        return number * 2;
+    });
+
+    document.getElementById("output").innerHTML =
+        "Original Numbers: " + numbers.join(", ") +
+        "<br>Doubled Numbers: " + doubledNumbers.join(", ");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spread Operator</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header>
+    <h1>25. Spread Operator</h1>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2>Combining Arrays</h2>
+        <p id="output"></p>
+    </div>
+</main>
+
+<script>
+    let fruits = ["Apple", "Banana"];
+    let vegetables = ["Carrot", "Tomato"];
+
+    let combinedItems = [...fruits, ...vegetables];
+
+    document.getElementById("output").innerHTML =
+        "Fruits: " + fruits.join(", ") +
+        "<br>Vegetables: " + vegetables.join(", ") +
+        "<br>Combined: " + combinedItems.join(", ");
+</script>
+
+</body>
+</html>

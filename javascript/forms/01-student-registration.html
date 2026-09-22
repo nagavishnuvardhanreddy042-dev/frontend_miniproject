@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef4ff;
+            padding: 30px;
+        }
+
+        .form-box {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #bbb;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h1>Student Registration</h1>
+
+    <form id="registrationForm">
+
+        <label>Student Name:</label>
+        <input type="text" id="name">
+
+        <label>Email:</label>
+        <input type="email" id="email">
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone">
+
+        <label>Course:</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+        </select>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p id="message"></p>
+</div>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let course = document.getElementById("course").value;
+        let message = document.getElementById("message");
+
+        if (name === "" || email === "" || phone === "" || course === "") {
+            message.textContent = "Please fill all the fields.";
+            message.style.color = "red";
+        }
+        else if (phone.length !== 10 || isNaN(phone)) {
+            message.textContent = "Please enter a valid 10-digit phone number.";
+            message.style.color = "red";
+        }
+        else {
+            message.textContent = "Registration successful!";
+            message.style.color = "green";
+        }
+    });
+</script>
+
+</body>
+</html>

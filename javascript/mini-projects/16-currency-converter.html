@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <style>
+        .currency-box {
+            max-width: 450px;
+            margin: 30px auto;
+            padding: 25px;
+            text-align: center;
+            background-color: #f4f8f9;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        input, select {
+            padding: 12px;
+            width: 80%;
+            margin: 8px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #1d5963;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Currency Converter</h1>
+        <p>JavaScript Mini Project</p>
+    </header>
+
+    <main class="container">
+
+        <div class="currency-box">
+            <h2>USD to INR Converter</h2>
+
+            <input type="number" id="usd"
+                   placeholder="Enter amount in USD">
+
+            <button onclick="convertCurrency()">
+                Convert
+            </button>
+
+            <div id="result"></div>
+        </div>
+
+        <br>
+
+        <a href="../../index.html" class="btn">Back to Home</a>
+        <a href="index.html" class="btn">Back to Mini Projects</a>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Experiments</p>
+    </footer>
+
+    <script>
+        function convertCurrency() {
+            let usd = Number(
+                document.getElementById("usd").value
+            );
+
+            if (usd <= 0) {
+                alert("Enter a valid amount");
+                return;
+            }
+
+            let exchangeRate = 83;
+            let inr = usd * exchangeRate;
+
+            document.getElementById("result").textContent =
+                `${usd} USD = ₹${inr.toFixed(2)} INR`;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Object</title>
+</head>
+<body>
+
+<h1>Screen Object</h1>
+
+<button onclick="showScreenDetails()">Show Screen Details</button>
+
+<p id="result"></p>
+
+<script>
+    function showScreenDetails() {
+        document.getElementById("result").innerHTML =
+            "Screen Width: " + screen.width + "<br>" +
+            "Screen Height: " + screen.height + "<br>" +
+            "Available Width: " + screen.availWidth + "<br>" +
+            "Available Height: " + screen.availHeight + "<br>" +
+            "Color Depth: " + screen.colorDepth;
+    }
+</script>
+
+</body>
+</html>
